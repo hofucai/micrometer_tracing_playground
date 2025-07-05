@@ -1,0 +1,689 @@
+2025-06-24 21:58:56.963 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - Starting KafkaMicrometerPlaygroundApplicationKt using Java 21.0.2 with PID 10036 (W:\dev\github_repos\kafka_micrometer_playground\target\classes started by fucai in W:\dev\github_repos\kafka_micrometer_playground)
+2025-06-24 21:58:56.966 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - No active profile set, falling back to 1 default profile: "default"
+2025-06-24 21:58:58.355 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-24 21:58:58.356 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-24 21:58:58.357 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-24 21:58:58.400 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-24 21:58:58.905 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-24 21:58:58.953 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = toyListener-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = toyGroup
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-24 21:58:58.993 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-24 21:58:59.150 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-24 21:58:59.151 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-24 21:58:59.151 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750773539149
+2025-06-24 21:58:59.154 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-0, groupId=toyGroup] Subscribed to topic(s): toy_topic
+2025-06-24 21:58:59.161 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = toyListener-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = toyGroup
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-24 21:58:59.161 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-24 21:58:59.170 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-24 21:58:59.170 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-24 21:58:59.170 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750773539170
+2025-06-24 21:58:59.170 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-1, groupId=toyGroup] Subscribed to topic(s): toy_topic
+2025-06-24 21:58:59.178 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - Started KafkaMicrometerPlaygroundApplicationKt in 2.93 seconds (process running for 3.298)
+2025-06-24 21:58:59.525 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.525 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.526 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.526 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.527 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.527 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.633 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.633 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.633 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.650 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.650 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.650 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.749 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.749 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.750 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.765 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.766 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:58:59.956 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:58:59.956 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:58:59.956 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:00.035 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:00.035 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:00.036 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:00.330 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:00.331 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:00.331 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:00.532 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:00.532 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:00.532 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:01.050 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:01.050 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:01.050 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:01.503 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:01.503 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:01.503 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:01.927 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:01.927 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:01.927 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:02.445 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:02.445 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:02.445 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:02.935 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:02.935 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:02.936 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:03.452 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:03.452 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:03.452 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:03.879 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:03.879 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:03.879 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:04.442 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:04.443 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:04.443 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:04.898 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:04.898 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:04.898 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:05.448 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:05.448 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:05.448 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:05.777 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Node -1 disconnected.
+2025-06-24 21:59:05.777 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-06-24 21:59:05.777 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-06-24 21:59:06.368 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.368 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.368 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.368 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.369 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-0, groupId=toyGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-06-24 21:59:06.369 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-1, groupId=toyGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-06-24 21:59:06.370 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.370 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.370 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.370 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 21:59:06.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-24 21:59:06.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-24 21:59:06.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-24 21:59:06.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-24 21:59:06.372 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-24 21:59:06.373 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-24 21:59:06.373 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-24 21:59:06.373 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-24 21:59:06.377 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for toyListener-1 unregistered
+2025-06-24 21:59:06.377 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for toyListener-0 unregistered
+2025-06-24 22:02:37.486 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - Starting KafkaMicrometerPlaygroundApplicationKt using Java 21.0.2 with PID 27208 (W:\dev\github_repos\kafka_micrometer_playground\target\classes started by fucai in W:\dev\github_repos\kafka_micrometer_playground)
+2025-06-24 22:02:37.488 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - No active profile set, falling back to 1 default profile: "default"
+2025-06-24 22:02:38.989 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-06-24 22:02:38.992 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-06-24 22:02:38.992 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-24 22:02:39.044 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-06-24 22:02:39.674 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-06-24 22:02:39.732 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = toyListener-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = toyGroup
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-24 22:02:39.802 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-24 22:02:39.999 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-24 22:02:40.000 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-24 22:02:40.000 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750773759998
+2025-06-24 22:02:40.003 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-0, groupId=toyGroup] Subscribed to topic(s): toy_topic
+2025-06-24 22:02:40.009 [main] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = toyListener-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = toyGroup
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-24 22:02:40.010 [main] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-06-24 22:02:40.018 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.9.1
+2025-06-24 22:02:40.018 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f745dfdcee2b9851
+2025-06-24 22:02:40.018 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1750773760018
+2025-06-24 22:02:40.019 [main] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-1, groupId=toyGroup] Subscribed to topic(s): toy_topic
+2025-06-24 22:02:40.027 [main] INFO  m.f.k.KafkaMicrometerPlaygroundApplicationKt - Started KafkaMicrometerPlaygroundApplicationKt in 3.174 seconds (process running for 3.543)
+2025-06-24 22:02:40.529 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 2 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.529 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 2 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.531 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=toyListener-1, groupId=toyGroup] Cluster ID: MkU3OEVBNTcwNTJENDM2Qk
+2025-06-24 22:02:40.531 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  org.apache.kafka.clients.Metadata - [Consumer clientId=toyListener-0, groupId=toyGroup] Cluster ID: MkU3OEVBNTcwNTJENDM2Qk
+2025-06-24 22:02:40.642 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 5 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.642 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 5 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.651 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.651 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.654 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.654 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.675 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.675 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.675 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.675 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.675 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.676 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.676 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.676 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.782 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.784 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:40.785 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.792 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.792 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.792 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.792 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.796 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.799 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:40.800 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.806 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.806 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.806 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.806 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.810 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.810 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.810 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.898 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 15 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.901 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.902 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:40.902 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.905 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] The metadata response from the cluster reported a recoverable issue with correlation id 15 : {toy_topic=UNKNOWN_TOPIC_OR_PARTITION}
+2025-06-24 22:02:40.907 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.908 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:40.912 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.913 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.913 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.913 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.914 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.914 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:40.914 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:40.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:40.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:40.917 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.003 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.004 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.005 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.011 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.011 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.011 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.011 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.014 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.015 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.015 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.015 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.016 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.017 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.022 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.022 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.022 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.022 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.025 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.101 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.102 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.112 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.112 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.112 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.135 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.136 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.137 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.140 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.140 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.140 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.140 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.142 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.143 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.143 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.214 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.215 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.216 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.221 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-1, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.225 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.225 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.225 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.230 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.232 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.234 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.239 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: error response NOT_COORDINATOR. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.239 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.239 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] JoinGroup failed: This is not the correct coordinator. Marking coordinator unknown. Sent generation was Generation{generationId=-1, memberId='', protocol='null'}
+2025-06-24 22:02:41.239 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=toyListener-0, groupId=toyGroup] Client requested disconnect from node 2147483646
+2025-06-24 22:02:41.242 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.242 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2025-06-24 22:02:41.242 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.347 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.348 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.349 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.354 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-06-24 22:02:41.355 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: rebalance failed due to 'This is not the correct coordinator.' (NotCoordinatorException)
+2025-06-24 22:02:41.356 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.363 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: need to re-join with the given member-id: toyListener-1-a0581b56-18f1-4ae4-bdea-135449302a02
+2025-06-24 22:02:41.363 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: need to re-join with the given member-id: toyListener-0-4687e534-d9c7-4201-bcea-b6aabeaca1a2
+2025-06-24 22:02:41.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] (Re-)joining group
+2025-06-24 22:02:41.381 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Successfully joined group with generation Generation{generationId=1, memberId='toyListener-0-4687e534-d9c7-4201-bcea-b6aabeaca1a2', protocol='range'}
+2025-06-24 22:02:41.381 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Successfully joined group with generation Generation{generationId=1, memberId='toyListener-1-a0581b56-18f1-4ae4-bdea-135449302a02', protocol='range'}
+2025-06-24 22:02:41.386 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Finished assignment for group at generation 1: {toyListener-1-a0581b56-18f1-4ae4-bdea-135449302a02=Assignment(partitions=[]), toyListener-0-4687e534-d9c7-4201-bcea-b6aabeaca1a2=Assignment(partitions=[toy_topic-0])}
+2025-06-24 22:02:41.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Successfully synced group in generation Generation{generationId=1, memberId='toyListener-1-a0581b56-18f1-4ae4-bdea-135449302a02', protocol='range'}
+2025-06-24 22:02:41.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Successfully synced group in generation Generation{generationId=1, memberId='toyListener-0-4687e534-d9c7-4201-bcea-b6aabeaca1a2', protocol='range'}
+2025-06-24 22:02:41.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Notifying assignor about the new Assignment(partitions=[])
+2025-06-24 22:02:41.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Notifying assignor about the new Assignment(partitions=[toy_topic-0])
+2025-06-24 22:02:41.411 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=toyListener-1, groupId=toyGroup] Adding newly assigned partitions: 
+2025-06-24 22:02:41.413 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=toyListener-0, groupId=toyGroup] Adding newly assigned partitions: toy_topic-0
+2025-06-24 22:02:41.426 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Found no committed offset for partition toy_topic-0
+2025-06-24 22:02:41.442 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.SubscriptionState - [Consumer clientId=toyListener-0, groupId=toyGroup] Resetting offset for partition toy_topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-24 22:06:51.340 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Member toyListener-1-a0581b56-18f1-4ae4-bdea-135449302a02 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-06-24 22:06:51.340 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerRebalanceListenerInvoker - [Consumer clientId=toyListener-0, groupId=toyGroup] Revoke previously assigned partitions toy_topic-0
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Member toyListener-0-4687e534-d9c7-4201-bcea-b6aabeaca1a2 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-1, groupId=toyGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.341 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ClassicKafkaConsumer - [Consumer clientId=toyListener-0, groupId=toyGroup] Unsubscribed all topics or patterns and assigned partitions
+2025-06-24 22:06:51.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-0, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=toyListener-1, groupId=toyGroup] Request joining group due to: consumer pro-actively leaving the group
+2025-06-24 22:06:51.350 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-24 22:06:51.350 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-24 22:06:51.350 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-24 22:06:51.350 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-24 22:06:51.355 [org.springframework.kafka.KafkaListenerEndpointContainer#0-1-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for toyListener-1 unregistered
+2025-06-24 22:06:51.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2025-06-24 22:06:51.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-06-24 22:06:51.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2025-06-24 22:06:51.376 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2025-06-24 22:06:51.380 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for toyListener-0 unregistered
