@@ -21,23 +21,45 @@ class ToyListener(
     )
     fun listen(records: List<ConsumerRecord<String, String>>) {
 
-        log.info {"trace context now is ${tracer.currentTraceContext().context()}"}
+        log.info { "trace context now is ${tracer.currentTraceContext().context()}" }
 
 
 
-        records.forEach { record -> val span = tracer.nextSpan().name("listener_entry")
+        records.forEach { record ->
 
-            val s = tracer.startScopedSpan("my-span").apply {
-                tracer.createBaggageInScope(tracer.currentTraceContext().context()!!,
-                    Constants.MESSAGE_HEADER_ID,
-                    record.headers().lastHeader(Constants.MESSAGE_HEADER_ID).value().toString(Charsets.UTF_8))
+            val messageID = record.headers().lastHeader(Constants.MESSAGE_HEADER_ID)
+                .value().toString(Charsets.UTF_8)
+            val span = tracer.nextSpan().name("process-message")
+            span.tag(Constants.MESSAGE_HEADER_ID, messageID)
+
+            try {
+                tracer.withSpan(span).use {
+                    log.info { " Current context: " + tracer.currentTraceContext().context() }
+                    log.info {
+                        "header ID : " +
+                                messageID +
+                                "value : ${record.value()}"
+                    }
+                }
+            } finally {
+                span.end()
             }
-                log.info {" Current context: " + tracer.currentTraceContext()}
-                log.info { "header ID : " +
-                    record.headers().lastHeader(Constants.MESSAGE_HEADER_ID).value().toString(Charsets.UTF_8) +
-                        "value : ${record.value()}"
-            }
-            s.end()
+
+
+//            val s = tracer.startScopedSpan("my-span").apply {
+//                tracer.createBaggageInScope(
+//                    tracer.currentTraceContext().context()!!,
+//                    Constants.MESSAGE_HEADER_ID,
+//                    messageID
+//                )
+//            }
+//            log.info { " Current context: " + tracer.currentTraceContext() }
+//            log.info {
+//                "header ID : " +
+//                        messageID +
+//                        "value : ${record.value()}"
+//            }
+//            s.end()
         }
     }
 
